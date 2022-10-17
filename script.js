@@ -12,24 +12,44 @@ const durationEl = document.getElementById('duration')
 
 const songs =  [
     {
-        name: 'jacinto-1',
-        displayName: 'Song-1',
-        artist : 'Rahul Zod'
+        name: 'asitwas',
+        displayName: 'As it Was',
+        artist : 'Harry Styles'
     },
     {
-        name: 'jacinto-2',
-        displayName: 'Song-2',
-        artist : 'Rahul Zod'
+        name: 'toxic',
+        displayName: 'Toxic',
+        artist : 'BoyWithUke'
     },
     {
-        name: 'jacinto-3',
-        displayName: 'Song-3',
-        artist : 'Rahul Zod'
+        name: 'brownmunde',
+        displayName: 'Brown Munde',
+        artist : 'AP Dhillon'
     },
     {
-        name: 'metric-1',
-        displayName: 'Song-4',
-        artist : 'Rahul Zod'
+        name: 'kesariya',
+        displayName: 'Kesariya',
+        artist : 'Pritam, Arijit'
+    },
+    {
+        name: 'saami',
+        displayName: 'Saami Saami',
+        artist : 'Mounika Yadav'
+    },
+    {
+        name: 'uti',
+        displayName: 'Under The Influence',
+        artist : 'Chris Brown'
+    },
+    {
+        name: 'resham',
+        displayName: 'Resham',
+        artist : 'Nepathya'
+    },
+    {
+        name: 'bindinglights',
+        displayName: 'Binding Lights',
+        artist : 'The Weekend'
     }
 ]
 let isPlaying = false
@@ -39,12 +59,14 @@ function playSong(){
     playBtn.classList.replace('fa-play','fa-pause')
     playBtn.setAttribute('title','Pause')
     isPlaying = true
+    image.classList.add('animate')
 }
 function pauseSong(){
     isPlaying = false
     playBtn.classList.replace('fa-pause','fa-play')
     playBtn.setAttribute('title','Play')
     music.pause()
+    image.classList.remove('animate')
 }
 
 playBtn.addEventListener('click',()=>(isPlaying?  pauseSong():playSong()))

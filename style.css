@@ -16,7 +16,7 @@ body {
 
 .player-container{
   background:#e7e7e7;
-  height: 450px;
+  height: 480px;
   width: 400px;
   border-radius: 20px;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
@@ -25,16 +25,17 @@ body {
 
 .img-container {
   position: relative;
-  top: -50px;
+  top: -40px;
   left: 50px;
-  height: 270px;
+  height: 300px;
   width: 300px;
 }
 
 .img-container img{
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 50%;
+  object-fit:fill;
   box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.6);
 }
 
@@ -126,3 +127,19 @@ h3 {
     left: 100px;
   }
 }
+
+
+/* animation */
+.animate{
+  animation: rotatePlayer 20s linear infinite;
+}
+ 
+@keyframes rotatePlayer{
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
